@@ -1,5 +1,4 @@
 env/
 *.code-workspace
-data/
 .vscode
 clusters.png

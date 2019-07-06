@@ -28,6 +28,7 @@ The script takes to inputs:
 | ------ | ----- | ----------- |
 | --filename "data/yourdata.json" | -f | Input data to cluster |
 | --clusters 5 | -c | Number of cluster for the final plot |
+| --no-plot | -np | Disables showing the plot windows. Still saved the final plot to file |
 
 ## Outputs
 

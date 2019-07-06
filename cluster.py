@@ -32,6 +32,7 @@ parser.add_argument("-f", "--file", dest="filename",
                     help="input dataset in json format", metavar="FILE")
 parser.add_argument("-c", "--clusters",
                     dest="num_clusters", help="number of clusters")
+parser.add_argument("-np", "--no-plot", dest="noplot", help="disables showing the plot windows", action='store_true')
 
 args = parser.parse_args()
 
@@ -128,7 +129,8 @@ plt.plot(K, distortions, 'bx-')
 plt.xlabel('k')
 plt.ylabel('Distortion')
 plt.title('The Elbow Method showing the optimal k')
-plt.show()
+if not args.noplot:
+    plt.show()
 
 # Silhouette Analysis
 
@@ -215,8 +217,8 @@ for k in K:
     plt.suptitle(("Silhouette analysis for KMeans clustering on sample data "
                   "with n_clusters = %d" % k),
                  fontsize=14, fontweight='bold')
-
-plt.show()
+if not args.noplot:
+    plt.show()
 
 # Run Clustering for given k and generate plot
 km = KMeans(n_clusters=int(args.num_clusters), random_state=1)
