@@ -7,7 +7,7 @@ This script takes a set of student questions from the AMATI project and runs a c
 Create a venv and install the required libraries
 
 ```
-python venv -m env
+python -m venv env
 pip install -r requirements.txt
 ```
 
