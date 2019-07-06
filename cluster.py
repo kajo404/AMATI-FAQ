@@ -253,7 +253,11 @@ for i in range(int(args.num_clusters)):
     # for title in frame.ix[i]['slideSet'].values.tolist():
     #    print(' %i,' % title, end='')
     # print(set(frame.ix[i]['slideSet'].values.tolist()))
-    # print(frame.ix[i]['content'].values.tolist())
+    count = 0
+    for question in frame.ix[i]['content'].values.tolist():
+        if count < 10:
+            print(question)
+        count = count + 1
     print()  # add whitespace
     print()  # add whitespace
 
