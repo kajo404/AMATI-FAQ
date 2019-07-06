@@ -8,6 +8,7 @@ Create a venv and install the required libraries
 
 ```
 python -m venv env
+source env/bin/activate
 pip install -r requirements.txt
 ```
 
