@@ -56,7 +56,6 @@ nltk.download('punkt')
 stopwords = nltk.corpus.stopwords.words('english')
 stemmer = SnowballStemmer("english")
 
-
 def tokenize_and_stem(text):
     # first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token
     tokens = [word for sent in nltk.sent_tokenize(
@@ -81,6 +80,11 @@ def tokenize_only(text):
             filtered_tokens.append(token)
     return filtered_tokens
 
+#preprocess stopwords
+stopwords_stemmed = []
+for word in stopwords:
+    for token in nltk.word_tokenize(word):
+        stopwords_stemmed.append(stemmer.stem(token))
 
 totalvocab_stemmed = []
 totalvocab_tokenized = []
@@ -100,7 +104,7 @@ print('Built vocabulary of ' + str(vocab_frame.shape[0]) + ' items')
 
 # tfidf
 tfidf_vectorizer = TfidfVectorizer(max_df=1.0, max_features=200000,
-                                   min_df=0.03, stop_words='english',
+                                   min_df=0.03, stop_words=stopwords_stemmed,
                                    use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
 
 #
