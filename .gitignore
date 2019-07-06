@@ -2,3 +2,4 @@ env/
 *.code-workspace
 .vscode
 clusters.png
+data/*17.json

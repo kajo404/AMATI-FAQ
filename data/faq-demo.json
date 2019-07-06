@@ -1,0 +1,19 @@
+[
+    {
+        "question": "When is the final exam? What is the date for the repeat exam?",
+        "answer": "The final exam is on 21.07.2019 and the retake exam is scheduled for 15.08.2019."
+    },
+    {
+        "question": "When is the recording of the lecture going to be uploaded?",
+        "answer": "The recordings will be uploaded when they are finished editing."
+    },
+    {
+        "question": "I am not happy with the result of the matching of my tutor group, how can I change my group?",
+        "answer": "You can send an email to the tutor of a group you are interested in and ask if there are any open spots after the first tutorial."
+    },
+    {
+        "question": "When and where are the lecture slides going to be uploaded?",
+        "answer": "They are uploaded one week before the lecture the earliest. When they are ready, they are uploaded to moodle"
+    }
+
+]
