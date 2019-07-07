@@ -56,9 +56,9 @@ The `predict.py` script takes these inputs:
 | --input | -i | Input of data to predict against FAQ model |
 | --faq | -faq | FAQ data in .json format to build the tf-idf model |
 
-The input needs to be a `json` array where each element has a `content` field
+The input needs to be a `json` array where each element has a `content` field.
 
-The FAQ data should also be an array consisting of elements with `question` and `answer` fields
+The FAQ data should also be an array consisting of elements with `question` and `answer` fields.
 
 
 
